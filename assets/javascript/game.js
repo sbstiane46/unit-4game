@@ -12,8 +12,8 @@ $(document).ready(function(){
     var losses= 0;
     var playerTotal= 0;
     
-    $('#numberWins').text(wins);
-    $('#numberLosses').text(losses);
+    $('#theWins').text(wins);
+    $('#theLosses').text(losses);
     //reset
     function reset(){
         Random=Math.floor(Math.random()*41+9);
@@ -22,62 +22,62 @@ $(document).ready(function(){
         num2= Math.floor(Math.random()*9+1);
         num3= Math.floor(Math.random()*9+1);
         num4= Math.floor(Math.random()*9+1);
-        userTotal=0;
-        $('#finalTotal').text(userTotal);
+        theScore=0;
+        $('#theScore').text(totalScore);
     }
     //wins
     function winner(){
-        $('#numberWins').text(Wins);
+        $('#theWins').text(Wins);
         reset();
     }
     //losses
     function loser(){
         losses++;
-        $('#numberLosses').text(Losses);
+        $('#theLosses').text(Losses);
         reset();
     }
     //clicking
     $('#one').on ('click', function(){
-        userTotal = userTotal + num1;
-        console.log("New userTotal= " + userTotal);
-        $('#finalTotal').text(userTotal); 
-        if (userTotal == Random){
+        totalScore = totalScore + num1;
+        console.log("New userTotal= " + totalScore);
+        $('#theScore').text(totalScore); 
+        if (totalScore == Random){
           winner();
         }
-        else if ( userTotal > Random){
+        else if (totalScore > Random){
            loser();
         }   
       })  
       $('#two').on ('click', function(){
         userTotal = userTotal + num2;
-        console.log("New userTotal= " + userTotal);
-        $('#finalTotal').text(userTotal); 
-        if (userTotal == Random){
+        console.log("New userTotal= " + totalScore);
+        $('#theScore').text(totalScore); 
+        if (totalScore == Random){
            winner();
         }
-        else if ( userTotal > Random){
+        else if (totalScore > Random){
           loser();
         } 
       })  
       $('#three').on ('click', function(){
         userTotal = userTotal + num3;
-        console.log("New userTotal= " + userTotal);
-        $('#finalTotal').text(userTotal);
-        if (userTotal == Random){
+        console.log("New userTotal= " + totalScore);
+        $('#theScore').text(totalScore);
+        if (totalScore == Random){
             winner();
          }
-         else if ( userTotal > Random){
+         else if (totalScore > Random){
            loser();
          }
       })
       $('#four').on ('click', function(){
-        userTotal = userTotal + num4;
-        console.log("New userTotal= " + userTotal);
-        $('#finalTotal').text(userTotal);
-        if (userTotal == Random){
+        userTotal = totalScore + num4;
+        console.log("New userTotal= " + totalScore);
+        $('#finalTotal').text(totalScore);
+        if (totalScore == Random){
             winner();
          }
-         else if ( userTotal > Random){
+         else if (totalScore > Random){
            loser();
          }
 
