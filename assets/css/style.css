@@ -7,7 +7,7 @@ div{
     border: solid 1.5px rgb(180, 150, 15);
 }
 h1{
-    text-size-adjust: 30px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
     border: 2px;
@@ -16,10 +16,10 @@ h1{
 p{
     text-align: left;
     font-weight: bold;
-    text-size-adjust: 15px;
+    font-size: 20px;
 }
 h2{
-    text-size-adjust: 25px;
+    font-size: 25px;
     font-weight: bold;
     text-align: center;
 }
@@ -27,5 +27,5 @@ img{
     width: 80px; height: 80px;
 }
 .gems {
-    align-content: center;
+    
 }
