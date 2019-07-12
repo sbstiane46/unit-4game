@@ -10,7 +10,7 @@ $(document).ready(function(){
 
     var wins= 0;
     var losses= 0;
-    var playerTotal= 0;
+    var totalScore= 0;
     
     $('#theWins').text(wins);
     $('#theLosses').text(losses);
