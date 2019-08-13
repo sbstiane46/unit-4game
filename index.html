@@ -7,7 +7,8 @@
     <title>Crystal Collector</title>
     <link rel="stylesheet" type="text/css" href=>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="header"> 
@@ -22,33 +23,32 @@
         <p>Each time the game starts, the game will change the values of each crystal.</p> 
     </div>
 
-    <div class= "getNumber">
-       <span id= "randomNumber"></span>
+    <div class= "card-body">
+        <h1 class= "card-number" id= "randomNumber">39</h1>
     </div> 
 
+    <div class= "card-body">
+        <h1 class= "card-number" id= "currentNumber">0</h1>
+    </div>
+
     <div class= "winsLosses">
-        <h2>Wins:
-        <span id="theWins"></span>
-        </h2>
-        <h2>Losses:
-        <span id="theLosses"></span>
-        </h2>
+        <h2 id="theWins">Wins: </h2>
+        <br>
+        <h2 id="theLosses">Losses: </h2>
     </div>
 
-    <div class= "gems">
-        <img src="assets/images/redgem.jpg" id="one" alt="Red Gem">
-        <img src="assets/images/greengem.jpg" id="two" alt="Green Gem">
-        <img src="assets/images/yellowgem.png" id="three" alt="Yellow Gem">
-        <img src="assets/images/whitegem.png" id="four" alt="White Gem">
+    
+
+    <div class= "gemButtons">
+        <button id="one"><img src="assets/images/redgem.jpg" alt="Red Gem"></button>
+        <button id="two"><img src="assets/images/greengem.jpg" alt="Green Gem"></button>
+        <button id="three"><img src="assets/images/yellowgem.png" alt="Yellow Gem"></button>
+        <button id ="four"><img src="assets/images/whitegem.png" alt="White Gem"></button>
     </div>
 
-    <div class= "totalScore">
-        <h2>Your total score is:
-        <span id="theScore"></span>
-        </h2>
-    </div>
-    <script> src="https://code.jquery.com/jquery-2.2.4.min.js"</script>
+
+   
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
-</html>
+</html> 
