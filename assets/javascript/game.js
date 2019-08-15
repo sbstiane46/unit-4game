@@ -8,8 +8,8 @@ $(document).ready(function startGame(){
   var btnTwo = 0;
   var btnThree = 0;
   var btnFour = 0;
-  var theWins= 0;
-  var theLosses= 0;
+  var wins= 0;
+  var losses= 0;
 
   // random number at beginning 
   resetNumber()
@@ -18,15 +18,15 @@ $(document).ready(function startGame(){
   function resetNumber() {
 
   
-    // //Numbers that appear will be selected between 19 and 80 
-    var randomNumber = Math.floor(Math.random() * 79 + 19)
+    // //Numbers that appear will be selected between 1 and 30 
+    var randomNumber = Math.floor(Math.random() * 29 + 1)
     $("#randomNumber").text(randomNumber);
 
-    // //random numbers per gem are between 1 and 10
-    btnOne = Math.floor(Math.random() * 9) + 1;
-     btnTwo = Math.floor(Math.random() * 9) + 1;
-     btnThree = Math.floor(Math.random() * 9) + 1;
-     btnFour = Math.floor(Math.random() * 9) + 1;
+    // //random numbers per gem are between 1 and 9
+    btnOne = Math.floor(Math.random() * 8) + 1;
+    btnTwo = Math.floor(Math.random() * 8) + 1;
+    btnThree = Math.floor(Math.random() * 8) + 1;
+    btnFour = Math.floor(Math.random() * 8) + 1;
 
   }
 
@@ -93,16 +93,20 @@ $(document).ready(function startGame(){
 function winsLosses() {
   if (currentNumber === randomNumber) {
     alert("Great job! You got the" + randomNumber + "!");
-    theWins++;
+    wins++;
+    $("#theWins").text("Wins: " + wins);
+    currentNumber = 0;
     $("#theWins").text(currentNumber);
     resetNumber();
   }
-
-  else if (currentNumber > randomNumber) {
+// when currentNumber > randomNumber is places correctly (like so), the you went over always shows...
+  else if (currentNumber < randomNumber) {
     alert("You went above the number!");
-    theLosses++;
+    losses++;
+    $("#theLosses").text("Losses: " + losses);
     alert("Try again!");
-    $("theLosses").text(currentNumber);
+    currentNumber = 0;
+    $("#theLosses").text(currentNumber);
     resetNumber();
 
   }
