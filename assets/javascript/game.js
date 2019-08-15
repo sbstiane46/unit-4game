@@ -30,36 +30,6 @@ $(document).ready(function startGame(){
 
   }
 
-
-
-    
-    // var totalScore= 0;
-    
-    // $('#theWins').text(wins);
-    // $('#theLosses').text(losses);
-    // //reset
-    // function reset(){
-    //     Random=Math.floor(Math.random()*41+9);
-    //     $('#randomNumber').text(Random);
-    //     num1= Math.floor(Math.random()*9+1);
-    //     num2= Math.floor(Math.random()*9+1);
-    //     num3= Math.floor(Math.random()*9+1);
-    //     num4= Math.floor(Math.random()*9+1);
-    //     theScore=0;
-    //     $('#theScore').text(totalScore);
-    // }
-    // //wins
-    // function winner(){
-    //     $('#theWins').text(Wins);
-    //     reset();
-    // }
-    // //losses
-    // function loser(){
-    //     losses++;
-    //     $('#theLosses').text(Losses);
-    //     reset();
-    // }
-
     // //clicking
   $('#one').on ('click', function(){
         currentNumber += btnOne;
